@@ -1,3 +1,7 @@
+/*
+ By Liyanboy74
+ https://github.com/liyanboy74
+*/
 #include <mega16a.h>
 #include <delay.h>
 #include <stdint.h>
