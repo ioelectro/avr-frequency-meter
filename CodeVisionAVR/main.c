@@ -20,7 +20,7 @@ unsigned long timerCap;
 
 void control_seg(uint8_t segNumberFrom0To7,uint8_t OnOff)
 {
-    if(OnOff)SEG_CONTROL_PORT|=(1<<segNumberFrom0To7);
+    if(!OnOff)SEG_CONTROL_PORT|=(1<<segNumberFrom0To7);
     else SEG_CONTROL_PORT&=~(1<<segNumberFrom0To7);
 }
 
