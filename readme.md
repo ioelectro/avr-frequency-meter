@@ -1,2 +1,2 @@
 # AVR Frequency Meter
-![Proteus](https://user-images.githubusercontent.com/64005694/128464613-9c94b64f-e78b-43ca-9fe0-b124111f96d2.jpg)
+![Schematic](https://user-images.githubusercontent.com/64005694/128466980-b0e68e7b-08cf-4dfb-8272-bad683630b2f.jpg)
