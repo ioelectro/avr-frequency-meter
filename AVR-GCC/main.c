@@ -125,17 +125,15 @@ int main(void)
       OCR1BL=0x00;
 
       // Timer(s)/Counter(s) Interrupt(s) initialization
-      TIMSK=(0<<OCIE2) | (0<<TOIE2) | (0<<TICIE1) | (0<<OCIE1A) | (0<<OCIE1B) | (1<<TOIE1) | (0<<OCIE0) | (0<<TOIE0);
+      TIMSK=(0<<OCIE2) | (0<<TOIE2) | (0<<TICIE1) | (0<<OCIE1A) | (0<<OCIE1B) | (1<<TOIE1) | (0<<TOIE0);
 
       // External Interrupt(s) initialization
       // INT0: On
       // INT0 Mode: Rising Edge
       // INT1: Off
-      // INT2: Off
-      GICR|=(0<<INT1) | (1<<INT0) | (0<<INT2);
+      GICR|=(0<<INT1) | (1<<INT0);
       MCUCR=(0<<ISC11) | (0<<ISC10) | (1<<ISC01) | (1<<ISC00);
-      MCUCSR=(0<<ISC2);
-      GIFR=(0<<INTF1) | (1<<INTF0) | (0<<INTF2);
+      GIFR=(0<<INTF1) | (1<<INTF0);
 
       // Global enable interrupts
       sei();

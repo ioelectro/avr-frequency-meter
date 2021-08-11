@@ -2,7 +2,7 @@
  By Liyanboy74
  https://github.com/liyanboy74
 */
-#include <mega16a.h>
+#include <mega8.h>
 #include <delay.h>
 #include <stdint.h>
 
@@ -98,7 +98,7 @@ void main(void)
     //GPIO Init
     DDRC=0x0F;
     DDRB=0xFF;
-
+    
     // Timer/Counter 1 initialization
     // Clock source: System Clock
     // Clock value: 1000/000 kHz
@@ -124,17 +124,15 @@ void main(void)
     OCR1BL=0x00;
 
     // Timer(s)/Counter(s) Interrupt(s) initialization
-    TIMSK=(0<<OCIE2) | (0<<TOIE2) | (0<<TICIE1) | (0<<OCIE1A) | (0<<OCIE1B) | (1<<TOIE1) | (0<<OCIE0) | (0<<TOIE0);
+    TIMSK=(0<<OCIE2) | (0<<TOIE2) | (0<<TICIE1) | (0<<OCIE1A) | (0<<OCIE1B) | (1<<TOIE1) | (0<<TOIE0);
 
     // External Interrupt(s) initialization
     // INT0: On
     // INT0 Mode: Rising Edge
     // INT1: Off
-    // INT2: Off
-    GICR|=(0<<INT1) | (1<<INT0) | (0<<INT2);
+    GICR|=(0<<INT1) | (1<<INT0);
     MCUCR=(0<<ISC11) | (0<<ISC10) | (1<<ISC01) | (1<<ISC00);
-    MCUCSR=(0<<ISC2);
-    GIFR=(0<<INTF1) | (1<<INTF0) | (0<<INTF2);
+    GIFR=(0<<INTF1) | (1<<INTF0);
 
     // Global enable interrupts
     #asm("sei")

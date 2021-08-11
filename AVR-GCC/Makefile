@@ -1,5 +1,5 @@
 PROJECT		=	project
-DEVICE 		=	atmega16
+DEVICE 		=	atmega8
 FREQ   		=	8000000UL
 
 CC     		=	avr-gcc
