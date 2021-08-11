@@ -1,2 +1,2 @@
 # AVR Frequency Meter
-![Schematic](https://user-images.githubusercontent.com/64005694/128466980-b0e68e7b-08cf-4dfb-8272-bad683630b2f.jpg)
+![Schematic](https://user-images.githubusercontent.com/64005694/128973548-c4995045-d0a6-45e1-82b5-3661a18ef905.jpg)
